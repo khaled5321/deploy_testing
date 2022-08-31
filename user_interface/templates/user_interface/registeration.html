@@ -1,0 +1,47 @@
+{% extends  'base.html'%}
+{% block title%} Registeration {% endblock %}
+{% block body %}
+<h1 class="text-center">Registeration Form</h1>
+
+<form class="container w-50 mt-5 pb-5" method="POST" action="">
+    {% csrf_token %}
+    {% if messages %}
+        <ul class="messages text-center">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="form-group mb-3">
+      <label class="form-label">Username</label>  
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="username" placeholder="username" class="form-control"  type="text">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Email</label>  
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+        
+    <div class="form-group mb-3">
+      <label class="form-label" >Password</label> 
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="password" placeholder="Password" class="form-control"  type="password">
+    </div>
+        
+    <div class="form-group mb-3">
+      <label class="form-label" >Confirm Password</label> 
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
+    </div>
+  
+    <input type="submit" class="btn btn-warning" value="Register">
+
+</form>
+<style>
+  .navbar-nav{
+    visibility: hidden;
+  }
+</style>
+{% endblock %}

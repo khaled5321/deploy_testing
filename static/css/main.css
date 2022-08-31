@@ -1,0 +1,397 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+.navbar {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  background-color: white;
+}
+.navbar a.navbar-brand {
+  color: rgb(30, 32, 92);
+  font-weight: 900;
+}
+
+#searchbar {
+  width: 100%;
+}
+#searchbar .search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+#searchbar .search-box .input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(30, 32, 92);
+  padding-right: 40px;
+  color: #262323;
+}
+#searchbar .search-box .input-search::placeholder {
+  color: #4e5053;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+#searchbar .search-box .input-search:focus {
+  width: 85%;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #51585e;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+#searchbar .search-box .btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  background-color: rgb(30, 32, 92);
+  pointer-events: painted;
+}
+#searchbar .search-box .btn-search:hover {
+  box-shadow: 0 1px 2px 0 rgb(30, 32, 92);
+  transition: box-shadow 0.5s;
+}
+#searchbar .search-box .btn-search:focus ~ .input-search {
+  width: 85%;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #51585e;
+  transition: all 0.5s cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.categories {
+  background-color: rgb(251, 251, 251);
+}
+.categories .cont {
+  padding: 1rem;
+}
+.categories .cont h5 {
+  color: rgb(30, 32, 92);
+}
+.categories .cont ul {
+  background-color: rgb(251, 251, 251);
+  list-style-type: none;
+}
+.categories .cont ul li {
+  color: rgb(30, 32, 92);
+  background-color: rgb(251, 251, 251);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .categories .cont ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+.categories .cont ul li a {
+  text-decoration: none;
+  color: rgb(30, 32, 92);
+}
+.categories .cont ul li a:hover {
+  background-color: rgb(243, 243, 243);
+}
+@media (max-width: 600px) {
+  .categories .cont ul li a button {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2px 4px;
+  }
+}
+.categories .cont ul li .subscribe {
+  border: none;
+}
+
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.5s;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card .card-title {
+  color: rgb(30, 32, 92);
+}
+.card .card-text {
+  color: #4e5053;
+}
+.card .card-text .text-muted {
+  letter-spacing: 2px;
+}
+
+.post_page {
+  /* Comment */
+  /* Adjustments for the comment border links */
+  /* Adjustments for toggleable comments */
+  /* Adjustment for Internet Explorer */
+  /* Styling the reply to comment form */
+}
+.post_page .cat {
+  margin-bottom: 2rem;
+}
+.post_page .card {
+  box-shadow: none;
+  border: none;
+}
+.post_page .card .likeCount {
+  margin-top: 40px;
+}
+.post_page .card .likeCount .like {
+  margin-right: 40px;
+  width: 100%;
+  max-width: 150px;
+}
+.post_page .card .likeCount .like button {
+  margin-right: 1rem;
+  background: none;
+  border: none;
+}
+.post_page .card .likeCount .like button i:hover {
+  color: #c01a1a;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 2em;
+}
+.post_page .card .likeCount .dislike {
+  margin-right: 40px;
+  width: 100%;
+  max-width: 150px;
+}
+.post_page .card .likeCount .dislike button {
+  margin-right: 1rem;
+  background: none;
+  border: none;
+}
+.post_page .card .likeCount .dislike button i:hover {
+  color: #c01a1a;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 2em;
+}
+.post_page h3 {
+  margin: 0 auto;
+  padding: 80px 0 40px 0;
+  text-align: center;
+  background-color: white;
+  max-width: 700px;
+}
+.post_page .comment-thread {
+  width: 700px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 30px;
+  background-color: #fff;
+  border: 1px solid transparent; /* Removes margin collapse */
+}
+.post_page .comment-thread button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.post_page .comment-thread button:hover,
+.post_page .comment-thread button:focus,
+.post_page .comment-thread button:active {
+  cursor: pointer;
+  background-color: #ecf0f1;
+}
+.post_page .m-0 {
+  margin: 0;
+}
+.post_page .sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.post_page .comment {
+  position: relative;
+  margin: 20px auto;
+}
+.post_page .comment-heading {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 14px;
+}
+.post_page .comment-voting {
+  width: 20px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.post_page .comment-voting button {
+  display: block;
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+}
+.post_page .comment-info {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+.post_page .comment-author {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  text-decoration: none;
+}
+.post_page .comment-author:hover {
+  text-decoration: underline;
+}
+.post_page .replies {
+  margin-left: 20px;
+}
+.post_page .comment-border-link {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 12px;
+  height: calc(100% - 50px);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+.post_page .comment-border-link:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.post_page .comment-body {
+  padding: 0 20px;
+  padding-left: 28px;
+}
+.post_page .replies {
+  margin-left: 28px;
+}
+.post_page details.comment summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+.post_page details.comment summary::-webkit-details-marker {
+  display: none;
+}
+.post_page details.comment:not([open]) .comment-heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.post_page .comment-heading::after {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  align-self: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.55);
+}
+.post_page details.comment[open] .comment-heading::after {
+  content: "Click to hide";
+}
+.post_page details.comment:not([open]) .comment-heading::after {
+  content: "Click to show";
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .post_page {
+    /* Resets cursor, and removes prompt text on Internet Explorer */
+  }
+  .post_page .comment-heading {
+    cursor: default;
+  }
+  .post_page details.comment[open] .comment-heading::after,
+.post_page details.comment:not([open]) .comment-heading::after {
+    content: " ";
+  }
+}
+.post_page .reply-form textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.post_page .d-none {
+  display: none;
+}
+.post_page .comment-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 0 30px;
+}
+.post_page .comment-form textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.post_page .comment-form button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  margin-bottom: 80px;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.post_page .comment-form button:hover, .post_page .comment-form button:focus, .post_page .comment-form button:active {
+  cursor: pointer;
+  background-color: #ecf0f1;
+}
+
+.messages {
+  font-size: 1.3rem;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.error {
+  color: var(--bs-danger);
+}
+
+.success {
+  color: var(--bs-success);
+}
+
+/*# sourceMappingURL=main.css.map */
